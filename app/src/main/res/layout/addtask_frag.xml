@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<data>
+
+    <import type="android.view.View"/>
+
+    <variable
+        name="viewmodel"
+        type="com.universaltask.ion.universaltask.viewmodels.TaskAddEditViewModel">
+    </variable>
+
+</data>
+
+
+    <com.universaltask.ion.universaltask.controls.ScrollChildSwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                >
+
+                <EditText
+                    android:id="@+id/add_task_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Title"
+                    android:text="@={viewmodel.title}"
+                    />
+
+                <EditText
+                    android:id="@+id/add_task_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:hint="Description"
+                    android:text="@={viewmodel.description}"
+                    />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </com.universaltask.ion.universaltask.controls.ScrollChildSwipeRefreshLayout>
+
+</layout>
